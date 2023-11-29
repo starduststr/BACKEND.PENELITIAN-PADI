@@ -1,10 +1,21 @@
 from fastapi import File, UploadFile
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 import os
 from prediction import Prediction
 
 prediction = Prediction()
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:8001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.post("/prediction")
 def upload(file: UploadFile = File(...)):

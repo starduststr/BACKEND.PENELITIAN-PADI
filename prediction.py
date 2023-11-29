@@ -61,9 +61,9 @@ class Prediction:
                 'confidence': confidence,
                 'image_path': image_path, 
                 'file_name' : img_file,
-                'description' : gpt.prompt(f'ini adalah label yang saya dapatkan dari prediksi model padi, jelaskan label {predicted_label}?'),
-                'rekomendasi_hayati' : gpt.prompt(f'buatkan saya rekomendasi hayati untuk {predicted_label}'),
-                'rekomendasi_kimiawi' : gpt.prompt(f'buatkan saya rekomendasi kimiawi untuk {predicted_label}')
+                'description' : gpt.prompt(f'ini adalah label yang saya dapatkan dari prediksi model padi, jelaskan apa itu label {predicted_label} dan gejalanya?'),
+                'pengendalian_hayati' : gpt.prompt(f'buatkan saya rekomendasi pengendalian hayati untuk {predicted_label}'),
+                'pengendalian_kimiawi' : gpt.prompt(f'buatkan saya rekomendasi pengendalian kimiawi untuk {predicted_label}')
             },
         }
 
