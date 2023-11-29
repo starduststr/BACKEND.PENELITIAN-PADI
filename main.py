@@ -6,7 +6,7 @@ from prediction import Prediction
 prediction = Prediction()
 app = FastAPI()
 
-@app.post("/upload-image")
+@app.post("/prediction")
 def upload(file: UploadFile = File(...)):
     try:
         image_folder = "assets/images"
